@@ -21,7 +21,7 @@ def get_filters():
     while True:
         #Case sensitive code: must use lower() built in function
         city = input("\nWould you like to see data from chicago, new york city or washington ?\n")
-        if city not in ('chicago', 'new york city', 'washington'):
+        if city.lower() not in ('chicago', 'new york city', 'washington'):
             print("Please, make a choice among the stated cities")
             continue
         else:
@@ -32,7 +32,7 @@ def get_filters():
         #Case sensitive code: must use lower() built in function
         month = input(
             "\nWich month do you want to filter by ? Type january', 'february', 'march', 'april', 'may', 'june' or type 'all' to ignore the filtering\n")
-        if month not in ("all", "january", "february", "march", "april", "may", "june"):
+        if month.lower() not in ("all", "january", "february", "march", "april", "may", "june"):
             print("\nPlease select a number from the given list !")
             continue
         else:
@@ -43,7 +43,7 @@ def get_filters():
         #Case sensitive code: must use lower() built in function
         day = input(
             "\nDo you want to filter by a specific day ? Type monday,tuesday, wednesday, thursday, friday, saturday or sunday to select a day or type 'all' to ignore the filtering\n")
-        if day not in ("all", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"):
+        if day.lower() not in ("all", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"):
             print("\nPlease select a number from the given list !")
         else:
             break
