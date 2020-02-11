@@ -194,6 +194,27 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
 
+    def display_data(df,a,b):
+        """Display 5 lines of raw data each time the user says "yes" and stop displaying when he says "no" """
+        
+        while True:
+            #Get user input on wether he wants to display raw data
+            user_choice = input("\nWould you like to see raw data ? Type 'yes' to display 5 lines of raw data or 'no' to stop the display.\n")
+            user_choice = user_choice.lower()
+            if user_choice not in ("yes","no"):
+                print("\nPlease, you must choose between 'yes' or 'no'")
+                continue
+                
+             #Display 5 lines of raw data
+            if user_choice == "yes":
+                raw_data = df.iloc[a:b]
+                print(raw_data)
+                a = b
+                b = b+5
+                continue
+            if user_choice == "no":
+                break
+
 
 def main():
     while True:
@@ -204,6 +225,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+        display_data(df,0,5)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
