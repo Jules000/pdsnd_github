@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+2020/02/11
 
-### Project Title
-Replace the Project Title
+### Explore-US-Bikeshare-Data
+Udacity Data Science Nano Degree - Final project
 
 ### Description
-Describe what your project is about and what it does
+This project allow users to explore data related to bikeshare in three United States cities Chicago, New York city and Washington. The code was written in python 3 with numpy and pandas libraries which allow us to perform descriptive statisc on raw data provided by csv files. So that the user could easily retrieve through an interactive application information such as Which gender bikes the most and so on...
 
 ### Files used
-Include the files used
+bikeshare_2.py, chicago.csv, new_york_city.csv and washington.csv
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+
 
